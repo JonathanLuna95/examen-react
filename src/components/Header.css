@@ -1,0 +1,143 @@
+.header-hero {
+  position: relative;
+  background-color: #071C4D;
+  color: #FFFFFF;
+  padding: 3.5rem 1.5rem 4rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 4px solid #143CDB;
+}
+
+.hero-team-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.side-argentina {
+  left: 0;
+  background: linear-gradient(135deg, #75AADB 0%, #FFFFFF 100%);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.side-espana {
+  right: 0;
+  background: linear-gradient(135deg, #AA151B 0%, #F1BF00 100%);
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-top-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFD447;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 2.75rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.team-arg {
+  color: #75AADB;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vs-badge {
+  background-color: #FFD447;
+  color: #071C4D;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: rotate(-3deg);
+}
+
+.team-esp {
+  color: #FF4C44;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-highlight-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #FFD447;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #143CDB;
+  padding-bottom: 0.35rem;
+}
+
+.header-subtitle {
+  font-size: 1.15rem;
+  color: #F7F5EF;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  max-width: 650px;
+  margin-top: 0.5rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .header-hero {
+    padding: 2.5rem 1rem 3rem;
+  }
+  .hero-main-title {
+    font-size: 1.85rem;
+    gap: 0.6rem;
+  }
+  .vs-badge {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .hero-highlight-text {
+    font-size: 1.2rem;
+  }
+  .header-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main-title {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .vs-badge {
+    transform: none;
+    margin: 0.2rem 0;
+  }
+}

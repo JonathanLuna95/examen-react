@@ -1,9 +1,15 @@
-function Footer(){
+import './Footer.css';
+
+function Footer() {
     return (
-        <div>
-            <h1>Este es el Footer</h1>
-        </div>
-    )
+        <footer className="footer">
+            <div className="footer-multicolor-line"></div>
+            <div className="footer-content">
+                <p className="footer-title">ARGENTINA VS ESPAÑA · FINAL 2026</p>
+                <p className="footer-subtitle">Exámen Final de React Desarrollado por Jonathan Luna</p>
+            </div>
+        </footer>
+    );
 }
 
-export default Footer
+export default Footer;

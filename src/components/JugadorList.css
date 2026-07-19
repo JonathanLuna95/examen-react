@@ -1,0 +1,132 @@
+.jugadores-seccion {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 3rem 1.75rem;
+}
+
+.seccion-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.seccion-titulo {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #071C4D;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.seccion-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #75AADB 0%, #FFFFFF 25%, #AA151B 50%, #F1BF00 100%);
+  border-radius: 2px;
+}
+
+.seccion-subtitulo {
+  font-size: 1.05rem;
+  color: #555555;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .jugadores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .jugadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .jugadores-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .jugadores-seccion {
+    padding: 1.75rem 1rem;
+  }
+  .seccion-titulo {
+    font-size: 1.45rem;
+  }
+}
+
+/* Paneles de carga y error */
+.panel-estado {
+  max-width: 520px;
+  margin: 4.5rem auto;
+  padding: 3rem 2rem;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(7, 28, 77, 0.1);
+  border: 1px solid #E5E0D5;
+}
+
+.panel-cargando {
+  border-top: 6px solid #143CDB;
+}
+
+.panel-cargando h2 {
+  color: #071C4D;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 1.25rem;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border: 4px solid #EFECE3;
+  border-top-color: #143CDB;
+  border-right-color: #FFD447;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.panel-error {
+  border-top: 6px solid #FF4C44;
+  background-color: #FFF8F8;
+}
+
+.panel-error h2 {
+  color: #FF4C44;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+    border-top-color: #143CDB;
+  }
+}

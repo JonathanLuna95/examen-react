@@ -1,0 +1,127 @@
+.jugador-card {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  border: 2px solid #E5E0D5;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(7, 28, 77, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+  .jugador-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(7, 28, 77, 0.15);
+    border-color: #143CDB;
+  }
+}
+
+.card-header-bar {
+  background-color: #071C4D;
+  height: 44px;
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.card-top-multicolor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #75AADB 0%, #FFFFFF 25%, #AA151B 50%, #F1BF00 100%);
+}
+
+.card-number-badge {
+  background-color: #FFD447;
+  color: #071C4D;
+  font-weight: 900;
+  font-size: 0.95rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #071C4D;
+  letter-spacing: 0.5px;
+}
+
+.card-image-box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(180deg, #F9F7F0 0%, #EFEBE0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  overflow: hidden;
+  border-bottom: 2px solid #EFEAE0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.card-body {
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.card-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #071C4D;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+  border-bottom: 2px solid #143CDB;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.3px;
+  word-break: break-word;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  color: #101828;
+}
+
+.card-detail-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.card-detail-item strong {
+  min-width: 75px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #143CDB;
+  font-weight: 800;
+}
+
+.jugador-card:focus-visible {
+  outline: 3px solid #FF4C44;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jugador-card {
+    transition: none;
+  }
+  .jugador-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,34 @@
+.footer {
+  background-color: #071C4D;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  position: relative;
+}
+
+.footer-multicolor-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #75AADB 0%, #FFFFFF 25%, #AA151B 50%, #F1BF00 100%);
+}
+
+.footer-content {
+  padding: 2.5rem 1.5rem;
+}
+
+.footer-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 0.45rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.footer-subtitle {
+  font-size: 0.92rem;
+  color: #F7F5EF;
+  opacity: 0.85;
+  letter-spacing: 0.3px;
+}
